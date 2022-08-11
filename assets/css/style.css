@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 19;
+  }
+body{
+
+} 
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    display: block;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    height: 70px;
+    background-color: rgb(29, 29, 29);
+}
+header .container{
+    height: 70px;
+}
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+header ul li{
+    list-style: none;
+    padding: 0 20px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.fundo{
+    background-color: #000;
+    height: 600px;
+    color: #fff;
+    padding: 75px 0;
+}
+.fundo h1{
+    font-size: 42px;
+    color: #fff;
+    position: relative;
+    width: max-content;
+}
+.fundo h2{
+    color: #a77bf3;
+    /* font-size: 56px; */
+    position: relative;
+    width: max-content;
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-family: monospace;
+}
+.fundo p{
+    font-size: 20px;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 275px;
+    margin-top: 1rem;
+}
+.links a{
+    border: 2px solid #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 1.3;
+}
+.links a:first-of-type{
+    border-color: #96dfed;
+}
+.links a:last-of-type{
+    border-color: #a77bf3;
+}
+.links ion-icon{
+    position: relative;
+    top: 2px;
+    margin-right: .2rem;
+}
+
+.fundo h2::before,
+.fundo h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fundo h2::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.fundo h2::after {
+    width: 0.125em;
+  background: rgb(255, 255, 255);
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
